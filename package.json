@@ -1,0 +1,26 @@
+{
+  "name": "touchdown",
+  "version": "1.0.0",
+  "description": "A JavaScript utility belt for the post-ES5 era.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mbullington/touchdown.git"
+  },
+  "author": "Michael Bullington <mikebullingtn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mbullington/touchdown/issues"
+  },
+  "homepage": "https://github.com/mbullington/touchdown",
+  "devDependencies": {
+    "better-assert": "^1.0.2",
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.0"
+  }
+}
