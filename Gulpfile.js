@@ -14,10 +14,11 @@ gulp.task('lint/index', function() {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('lint', ['lint/index', 'lint/lib'], function() {});
 
-gulp.task('test', function() {
+gulp.task('mocha', function() {
   return gulp.src('test/test.js', {read: false})
     .pipe(mocha({ reporter: 'spec' }));
 });
 
-gulp.task('tests', ['test', 'lint/lib', 'lint/index'], function() {});
+gulp.task('test', ['mocha', 'lint'], function() {});

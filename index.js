@@ -1,4 +1,3 @@
-var collections = require('./lib/collections.js'),
-    Dictionary = collections.Dictionary;
+var c = require('./lib/collections.js');
 
-module.exports = new Dictionary(collections, require('./lib/helpers.js'));
+module.exports = Object.freeze(c.merge({}, c, require('./lib/helpers.js')));

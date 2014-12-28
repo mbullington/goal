@@ -4,7 +4,7 @@
   "description": "A JavaScript utility belt for the post-ES5 era.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/gulp/bin/gulp.js tests"
+    "test": "./node_modules/gulp/bin/gulp.js test"
   },
   "repository": {
     "type": "git",
