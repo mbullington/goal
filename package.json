@@ -1,5 +1,5 @@
 {
-  "name": "touchdown",
+  "name": "goal",
   "version": "1.0.0",
   "description": "A JavaScript utility belt for the post-ES5 era.",
   "main": "index.js",
@@ -8,14 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mbullington/touchdown.git"
+    "url": "git://github.com/mbullington/goal.git"
   },
   "author": "Michael Bullington <mikebullingtn@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mbullington/touchdown/issues"
+    "url": "https://github.com/mbullington/goal/issues"
   },
-  "homepage": "https://github.com/mbullington/touchdown",
+  "homepage": "https://github.com/mbullington/goal",
+  "dependencies": {
+    "hashcode": "^1.0.3"
+  },
   "devDependencies": {
     "better-assert": "^1.0.2",
     "gulp": "^3.8.10",
