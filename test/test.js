@@ -102,3 +102,66 @@ describe('Collections', function() {
     assert(newarr[0] === 2);
   });
 });
+
+describe('Helpers', function() {
+  it('findChild()', function() {
+    assert(typeof _.findChild !== "undefined");
+    var obj = {
+      1: {
+        2: {
+          hello: 'hello'
+        }
+      }
+    };
+
+    assert(_.findChild(obj, ['1', '2']).hello === 'hello');
+
+    try {
+      _.findChild(obj, ['3']);
+      assert(false);
+    } catch(e) {
+    }
+  });
+
+  it('inherits()', function() {
+    assert(typeof _.inherits !== "undefined");
+    function A() {}
+    function B() {}
+
+    _.inherits(A, B);
+    assert(A.prototype.constructor === A);
+
+    var a = new A();
+    assert(a instanceof A);
+    assert(a instanceof B);
+  });
+
+  it('replaceAll()', function() {
+    assert(typeof _.replaceAll !== "undefined");
+    var string = "aaa bbb ccc";
+
+    assert(_.replaceAll(string, "a", "d") === "ddd bbb ccc");
+    assert(_.replaceAll(string, "a") === " bbb ccc");
+    assert(string === "aaa bbb ccc");
+
+    assert(_.replaceAll(string, "d") === "aaa bbb ccc");
+  });
+
+  it('toNumber()', function() {
+    assert(typeof _.toNumber !== "undefined");
+
+    assert(_.toNumber(null) === 0);
+    assert(_.toNumber() === 0);
+
+    assert(_.toNumber(2) === 2);
+    assert(_.toNumber(true) === 1);
+
+    var date = new Date();
+    assert(_.toNumber(date) === date.valueOf());
+  });
+
+  it('typeOf()', function() {
+    assert(typeof _.typeOf !== "undefined");
+    assert(_.typeOf(new Date()) === "date");
+  });
+});
