@@ -34,6 +34,14 @@ describe('Collections', function() {
       });
     });
   });
+  
+  it('isEmpty()', function() {
+    assert(typeof _.isEmpty !== "undefined");
+    assert(_.isEmpty({}));
+    assert(!_.isEmpty({
+      1: 1
+    }));
+  });
 
   it('mixin()', function() {
     assert(typeof _.mixin !== "undefined");
