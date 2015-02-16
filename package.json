@@ -1,6 +1,6 @@
 {
   "name": "goal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JavaScript utility belt for the post-ES5 era.",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,4 @@
-goal v1.0.0 [![Build Status](https://drone.io/github.com/mbullington/goal/status.png)](https://drone.io/github.com/mbullington/goal/latest)
+goal v1.0.1 [![Build Status](https://drone.io/github.com/mbullington/goal/status.png)](https://drone.io/github.com/mbullington/goal/latest)
 ===
 
 ```

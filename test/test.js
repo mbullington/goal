@@ -101,6 +101,23 @@ describe('Collections', function() {
     assert(newarr.length === 1);
     assert(newarr[0] === 2);
   });
+
+  it('replaceAll()', function() {
+    assert(typeof _.replaceAll !== "undefined");
+    var string = "aaa bbb ccc";
+
+    assert(_.replaceAll(string, "a", "d") === "ddd bbb ccc");
+    assert(_.replaceAll(string, "a") === " bbb ccc");
+    assert(string === "aaa bbb ccc");
+
+    assert(_.replaceAll(string, "d") === "aaa bbb ccc");
+
+    require('assert')(_.replaceAll(string, {
+      a: 'b',
+      b: 'c',
+      c: 'd'
+    }) === "ddd ddd ddd");
+  });
 });
 
 describe('Helpers', function() {
@@ -134,17 +151,6 @@ describe('Helpers', function() {
     var a = new A();
     assert(a instanceof A);
     assert(a instanceof B);
-  });
-
-  it('replaceAll()', function() {
-    assert(typeof _.replaceAll !== "undefined");
-    var string = "aaa bbb ccc";
-
-    assert(_.replaceAll(string, "a", "d") === "ddd bbb ccc");
-    assert(_.replaceAll(string, "a") === " bbb ccc");
-    assert(string === "aaa bbb ccc");
-
-    assert(_.replaceAll(string, "d") === "aaa bbb ccc");
   });
 
   it('toNumber()', function() {
